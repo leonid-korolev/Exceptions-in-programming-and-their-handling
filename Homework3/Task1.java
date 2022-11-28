@@ -5,11 +5,13 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Task1 {
+    private static final String UserData = null;
+
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in, "cp866");
         System.out.println("Введите через пробел данные в формате:\n Фамилия Имя Отчество Дата_рождения(dd.mm.yyyy) Номер_телефона Пол(символ латиницей f или m)");
         String userInput = sc.nextLine();
-        try (FileWriter writer = new FileWriter("UserData")) {
+        try (FileWriter writer = new FileWriter("Homework3/UserData.txt")) {
             if (userInput.split(" ").length < 6 ) {
                 System.out.println("Вы ввели меньше данных, чем требуется.");
             }
